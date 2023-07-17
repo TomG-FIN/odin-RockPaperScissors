@@ -50,11 +50,18 @@ function playRound(computerChoise, playerChoise) {
     return [winner, player_or_computer];
 }
 
-const playerSelection = "paper";
-//const computerSelection = getComputerChoice();
-
-//console.log("Player chooses: " + playerSelection)
-//console.log(playRound(computerSelection, playerSelection));
+function getPlayerSelection() {
+    let playerSelection = "";
+    playerSelection = prompt("Please write your selection (rock/paper/scissors): ")
+    playerSelection = playerSelection.toLowerCase();
+    // Error checking
+    if (playerSelection != "paper" || playerSelection != "rock" || != playerSelection != "scissors"){
+        // Do nothing but loop again
+    }
+    else {
+        return playerSelection;
+    }
+}
 
 // Play the game 5 times and keep count
 function game() {
