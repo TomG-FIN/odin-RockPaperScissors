@@ -51,16 +51,19 @@ function playRound(computerChoise, playerChoise) {
 }
 
 function getPlayerSelection() {
+while(true){
     let playerSelection = "";
     playerSelection = prompt("Please write your selection (rock/paper/scissors): ")
-    playerSelection = playerSelection.toLowerCase();
-    // Error checking
-    if (playerSelection != "paper" || playerSelection != "rock" || != playerSelection != "scissors"){
-        // Do nothing but loop again
+    while(playerSelection.length !== 0 && playerSelection !== null){
+        playerSelection = playerSelection.toLowerCase();
+        if (playerSelection === "paper" || playerSelection === "rock" || playerSelection === "scissors"){
+            console.log("Player chose: "+playerSelection)
+            return playerSelection
+            break;
+        }
+        playerSelection = prompt("Please write your selection (rock/paper/scissors): ")
     }
-    else {
-        return playerSelection;
-    }
+  }
 }
 
 // Play the game 5 times and keep count
@@ -72,7 +75,7 @@ function game() {
 
     for (let i = 0; i < 5; i++) {
 
-        winArray = playRound(getComputerChoice(), playerSelection)
+        winArray = playRound(getComputerChoice(), getPlayerSelection())
         console.log(winArray[0])
         if (winArray[1] === 2 && winArray[1] != null) { computerWins++; }
         if (winArray[1] === 1 && winArray[1] != null) { playerWins++; }
