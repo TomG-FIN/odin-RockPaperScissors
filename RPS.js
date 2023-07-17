@@ -79,6 +79,18 @@ function game() {
 
     console.log("Total played games: " + (draws+playerWins+computerWins))
 
+    if (playerWins === computerWins) {console.log("Tournament has come to a draw!")}
+    if (playerWins > computerWins) { 
+
+        console.log("Player wins the tournament!")
+    } 
+    else if (playerWins < computerWins) {
+        console.log("Computer wins the tournament!")
+    }
+    else {
+
+    }
+
 }
 
 game()
