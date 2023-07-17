@@ -13,34 +13,37 @@ function playRound(computerChoise, playerChoise) {
 
     if (playerChoise === "paper"){
         if (computerChoise === "rock"){
-            return console.log("You win! "+playerChoise+ " beats " +computerChoise)
+            return console.log("You win! "+ playerChoise + " beats " + computerChoise)
             }
         if (computerChoise === "scissors"){
-            return console.log("You lose! "+computerChoise+ " beats " +playerChoise)
+            return console.log("You lose! "+ computerChoise + " beats " + playerChoise)
             }
     }
 
     if (playerChoise === "rock"){
         if (computerChoise === "scissors"){
-            return console.log("You win! "+playerChoise+ " beats " +computerChoise)
+            return console.log("You win! "+ playerChoise + " beats " + computerChoise)
             }
-        if (computerChoise === "scissors"){
-            return console.log("You lose! "+ computerChoise + " beats " +playerChoise)
+        if (computerChoise === "paper"){
+            return console.log("You lose! "+ computerChoise + " beats " + playerChoise)
             }
     }
 
     if (playerChoise === "scissors"){
         if (computerChoise === "paper"){
-            return console.log("You win! "+playerChoise+ " beats " +computerChoise)
+            return console.log("You win! "+ playerChoise + " beats " + computerChoise)
             }
         if (computerChoise === "rock"){
-            return console.log("You lose! "+ computerChoise + " beats " +playerChoise)
+            return console.log("You lose! "+ computerChoise + " beats " + playerChoise)
             }
     }
 
 }
 
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
 
+console.log(playRound(computerSelection, playerSelection));
 
 // function getePlayerChoice(playerChoise) {
 //     let playerSelection;
@@ -48,5 +51,4 @@ function playRound(computerChoise, playerChoise) {
 //     return playerSelection;
 // }
 
-getComputerChoice();
 
