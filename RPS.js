@@ -7,37 +7,39 @@ function getComputerChoice() {
 }
 
 function playRound(computerChoise, playerChoise) {
+    let winner = "";
     if (playerChoise === computerChoise){
-        return console.log("Draw!")
+        winner = "Draw!"
     }
 
     if (playerChoise === "paper"){
         if (computerChoise === "rock"){
-            return console.log("You win! "+ playerChoise + " beats " + computerChoise)
+            winner = ("You win! "+ playerChoise + " beats " + computerChoise)
             }
         if (computerChoise === "scissors"){
-            return console.log("You lose! "+ computerChoise + " beats " + playerChoise)
+            winner = ("You lose! "+ computerChoise + " beats " + playerChoise)
             }
     }
 
     if (playerChoise === "rock"){
         if (computerChoise === "scissors"){
-            return console.log("You win! "+ playerChoise + " beats " + computerChoise)
+            winner = ("You win! "+ playerChoise + " beats " + computerChoise)
             }
         if (computerChoise === "paper"){
-            return console.log("You lose! "+ computerChoise + " beats " + playerChoise)
+            winner = ("You lose! "+ computerChoise + " beats " + playerChoise)
             }
     }
 
     if (playerChoise === "scissors"){
         if (computerChoise === "paper"){
-            return console.log("You win! "+ playerChoise + " beats " + computerChoise)
+            winner = ("You win! "+ playerChoise + " beats " + computerChoise)
             }
         if (computerChoise === "rock"){
-            return console.log("You lose! "+ computerChoise + " beats " + playerChoise)
+            winner = ("You lose! "+ computerChoise + " beats " + playerChoise)
             }
     }
 
+    return winner;
 }
 
 const playerSelection = "paper";
