@@ -40,8 +40,10 @@ function playRound(computerChoise, playerChoise) {
 
 }
 
-const playerSelection = "rock";
+const playerSelection = "paper";
 const computerSelection = getComputerChoice();
+
+console.log("Player chooses: " + playerSelection)
 
 console.log(playRound(computerSelection, playerSelection));
 
