@@ -103,7 +103,7 @@ function game() {
 
 }
 
-game()
+//game()
 
 // function getePlayerChoice(playerChoise) {
 //     let playerSelection;
