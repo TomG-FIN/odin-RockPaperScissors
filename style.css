@@ -1,7 +1,7 @@
 .header {
     background-color: red;
     margin: 0px;
-    padding: 0px;
+    padding: 8px 4px;
     border: 0px;    
 }
 .footer {
@@ -35,13 +35,21 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    height: 100px;
+    min-height: 100px;
     background-color: aquamarine;
     margin: 0px;
     padding-left: 24px;
     border: 0px;  
 }
-
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    background-color:chocolate;
+    margin: 0px;
+    border: 0px;  
+}
 .selectionArea {
     display: flex;
     justify-content: center;
