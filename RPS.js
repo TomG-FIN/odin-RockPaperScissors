@@ -103,6 +103,17 @@ function game() {
 
 }
 
+
+const playbuttons = document.querySelectorAll(".playbtn");
+
+ for (let i = 0; i < playbuttons.length; i++) {
+    playbuttons[i].addEventListener("click", function() {
+        console.log(playbuttons[i]);
+     });
+ }
+
+
+
 // game()
 
 // function getePlayerChoice(playerChoise) {
